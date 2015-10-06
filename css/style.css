@@ -49,6 +49,7 @@ body {
 }
 /******start-nav********/
 .nav {
+	float: right;
 	margin-top: 0.82em;
 
 }
