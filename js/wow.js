@@ -368,6 +368,17 @@
         this.cacheAnimationName(box);
       }
       box.style.visibility = hidden ? 'none' : 'visible';
+      if(!hidden){
+              $('#html').jQMeter({goal:'100',raised:'90',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#js').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#css').jQMeter({goal:'100',raised:'75',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#java').jQMeter({goal:'100',raised:'90',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#lucene').jQMeter({goal:'100',raised:'70',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#database').jQMeter({goal:'100',raised:'80',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#d3').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#maps').jQMeter({goal:'100',raised:'80',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#research').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+      }
       if (duration) {
         this.vendorSet(box.style, {
           animationDuration: duration

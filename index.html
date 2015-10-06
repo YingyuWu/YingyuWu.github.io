@@ -10,7 +10,9 @@
 <link rel="stylesheet" type="text/css" href="css/meter.css" />
 <link rel="stylesheet" href="css/animate.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-<script src="js/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jqmeter.min.js"></script>
+
 <!-- start gallery Script -->
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
@@ -69,22 +71,7 @@
 <!-- Add fancyBox main JS and CSS files -->
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
-<script>
-							$(document).ready(function() {
-								$('.popup-with-zoom-anim').magnificPopup({
-									type: 'inline',
-									fixedContentPos: false,
-									fixedBgPos: true,
-									overflowY: 'auto',
-									closeBtnInside: true,
-									preloader: false,
-									midClick: true,
-									removalDelay: 300,
-									mainClass: 'my-mfp-zoom-in'
-							});
-							//drawSkill();
-						});
-						</script>
+
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <!----end gallery----------->
@@ -369,34 +356,52 @@
 <div id="skills-left">
 	<h3>Front End</h3>
 	<br>
-	<h5 style="width:100px">HTML</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.8 optimum＝0.5></meter>
-	<br><br>
-	<h5>Javascript</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5> </meter>
-	<br><br>
-	<h5>CSS</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
-	<br><br>
+	<h5 style="width:100px">HTML</h5>
+  <div id="html"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.8 optimum＝0.5></meter>-->
+	<br>
+	<h5>Javascript</h5>
+  <div id="js"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5> </meter>-->
+	<br>
+	<h5>CSS</h5>
+  <div id="css"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>-->
+	<br>
 	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
 </div>
 <div id="skills-middle">
 	<h3>Back End</h3>
 	<br>
-	<h5 >JAVA</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5></meter>
-	<br><br>
-	<h5>Lucene</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.5> </meter>
-	<br><br>
-	<h5>Relational Database</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
-	<br><br>
+	<h5 >JAVA</h5>
+  <div id="java"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5></meter>-->
+	<br>
+	<h5>Lucene</h5>
+  <div id="lucene"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.5> </meter>-->
+	<br>
+	<h5>Relational Database</h5>
+  <div id="database"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>-->
+	<br>
 	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
 </div>
 <div id="skills-right">
 	<h3>Design & Visualization</h3>
 	<br>
-	<h5 >D3.js</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
-	<br><br>
-	<h5>Maps API</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.6> </meter>
-	<br><br>
-	<h5>Research & Analysis</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
-	<br><br>
+	<h5 >D3.js</h5>
+  <div id="d3"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>-->
+	<br>
+	<h5>Maps API</h5>
+  <div id="maps"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.6> </meter>-->
+	<br>
+	<h5>Research & Analysis</h5>
+  <div id="research"></div>
+  <!--<meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>-->
+	<br>
 	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
 </div>
 
@@ -567,6 +572,7 @@
           });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
     <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
     <script src="js/jquery.scrollTo.js"></script>
@@ -574,3 +580,29 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+      $(document).ready(function(e) {
+                $('.popup-with-zoom-anim').magnificPopup({
+                  type: 'inline',
+                  fixedContentPos: false,
+                  fixedBgPos: true,
+                  overflowY: 'auto',
+                  closeBtnInside: true,
+                  preloader: false,
+                  midClick: true,
+                  removalDelay: 300,
+                  mainClass: 'my-mfp-zoom-in'
+              });
+              //drawSkill();
+              $('#html').jQMeter({goal:'100',raised:'90',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#js').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#css').jQMeter({goal:'100',raised:'75',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#java').jQMeter({goal:'100',raised:'90',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#lucene').jQMeter({goal:'100',raised:'70',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#database').jQMeter({goal:'100',raised:'80',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#d3').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#maps').jQMeter({goal:'100',raised:'80',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+              $('#research').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
+});
+</script>
