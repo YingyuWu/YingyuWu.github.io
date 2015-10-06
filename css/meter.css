@@ -15,19 +15,38 @@ meter::-webkit-meter-optimum-value {
 }
 meter::-webkit-meter-optimum-value {
   box-shadow: 0 5px 5px -5px #999 inset;
-  background-color: #006666;
-  /*background-image: linear-gradient(
+ /* background-color: #006666;*/
+  background-image: linear-gradient(
     90deg, 
-    #8bcf69 5%, 
-    #e6d450 5%,
-    #e6d450 15%,
-    #f28f68 15%,
-    #f28f68 55%,
-    #cf82bf 55%,
-    #cf82bf 95%,
-    #719fd1 95%,
-    #719fd1 100%
-  );*/
+    #FF9933 5%, 
+    #FF9933 5%,
+    #FF9933 15%,
+    #FF9933 15%,
+    #FF9933 55%,
+    #FF9933 55%,
+    #FF9933 95%,
+    #FF9933 95%,
+    #FF9933 100%
+  );
+  /*transition: width .5s;
+  //width: 100% !important;*/
+  background-size: 100% 100%;
+}
+meter::-moz-meter-bar {/*For FireFox*/
+  box-shadow: 0 5px 5px -5px #999 inset;
+ /* background-color: #006666;*/
+  background-image: linear-gradient(
+    90deg, 
+    #FF9933 5%, 
+    #FF9933 5%,
+    #FF9933 15%,
+    #FF9933 15%,
+    #FF9933 55%,
+    #FF9933 55%,
+    #FF9933 95%,
+    #FF9933 95%,
+    #FF9933 100%
+  );
   /*transition: width .5s;
   //width: 100% !important;*/
   background-size: 100% 100%;
@@ -45,14 +64,15 @@ meter::-webkit-meter-optimum-value {
   text-align: center;
 }
 #skills h3{
-  color: black;
+  color: #663333;
+  /*background-color: #339966;*/
   font-size: 1.5em;
   font-weight: 500;
   z-index: 10;
   text-align: left;
 }
 #skills h5{
-  color: black;
+  color: white;
 }
 #skills-left{
   margin-left:13%;
