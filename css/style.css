@@ -49,8 +49,8 @@ body {
 }
 /******start-nav********/
 .nav {
-	float: right;
 	margin-top: 0.82em;
+
 }
 .nav > ul > li {
   	display:inline-block;
