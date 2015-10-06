@@ -259,7 +259,7 @@ body {
 }
 .about
 {
-	background: #1BBC9B;
+	background: #006666;
 	text-align:center;
 	padding: 5em 0em;
 }
@@ -1149,4 +1149,9 @@ padding: 1.2em 0em;
 #filters li:nth-child(1) {
 	margin-left: 50px;
 }
+#skills{
+	height:300px; 
+	background:#1BBC9B;
+	border-bottom:1px solid grey;
 }
+

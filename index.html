@@ -4,13 +4,21 @@
 <title>Yingyu Wu's Homepage</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/imgeffect.css" />
+<link rel="stylesheet" type="text/css" href="css/meter.css" />
+<link rel="stylesheet" href="css/animate.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script src="js/jquery.min.js"></script>
 <!-- start gallery Script -->
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="js/skills.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();//For speeding up the loading time of webpage
+</script>
  <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHFjv8_S4Nx_MF5q0eypFXhjEy0sLrY0k&sensor=false">
     </script>
@@ -74,6 +82,7 @@
 									removalDelay: 300,
 									mainClass: 'my-mfp-zoom-in'
 							});
+							//drawSkill();
 						});
 						</script>
 <script type="text/javascript" src="js/move-top.js"></script>
@@ -114,10 +123,10 @@
 </div>
 <!------end-header------------>
 <!-- start slider -->
-<div class="slider_bg">
+<div class="slider_bg" >
   <div class="wrap">
     <!---start-da-slider-->
-    <div class="da-slide" >
+    <div class="da-slide " >
       <h2>Hi, I'm Yingyu</h2>
       <p>I'm a lively also quiet girl. I love traveling around the world, talking with different people and learn their ideas and cultures. When I sit down, I enjoy coding to describe what I have learned and explored to the one like you </p>
       <a href="#portfolio" class="da-link scroll">Learnmore</a> <a href="#portfolio" class="scroll"><span class="da-img"> </span> </a> </div>
@@ -126,7 +135,7 @@
 </div>
 <!-----end-slider-------->
 <!--start portfolio------>
-<div class="wrap" id="portfolio">
+<div class="wrap wow fadeIn" id="portfolio" >
   <div class="main">
     <!-- start gallery  -->
     <div class="gallery1">
@@ -134,7 +143,7 @@
       <div id="small-dialog1" class="mfp-hide">
         <div class="pop_up">
           <h2>Kent Explore</h2>
-          <a href="http://jmao.pythonanywhere.com" target="_blank"><img src="images/Kent Explore.png" alt=""/></a>
+          <a href="http://yingyuwu.pythonanywhere.com" target="_blank"><img src="images/Kent Explore.png" alt=""/></a>
           <p class="para">Kent Explore is a website, which enable travelers and strangers to explore Kent City and plan their perfect trip. 
           <br><br>
           Kent Explore provids key information such as map service, point of interests and recommendations based on Google Maps API, HTML, CSS, JavaScript, JQuery, Python.
@@ -196,7 +205,7 @@
           <h2>Experience</h2>
           <p>Check my experience both in industry and research! Looking for more opportunities to enrich my knowledge and skills :)</p>
           <ul id="filters" class="clearfix" style="width:80%">
-            <li><span class="filter active" data-filter="web app card pro">All</span></li>
+            <li><span class="filter active" data-filter="web app pro">All</span></li>
             <li><span class="filter" data-filter="web pro">Web Application</span></li>
             <li><span class="filter" data-filter="app pro">Visualization Design</span></li>
             <li><span class="filter" data-filter="app">Publication</span></li>
@@ -354,8 +363,50 @@
   </div>
 </div>
 <!---End-gallery----->
+<!--Skills-->
+<div id="skills" class="wow fadeIn">
+<h2 style="padding-top:35px">My Skills Range</h2>
+<div id="skills-left">
+	<h3>Front End</h3>
+	<br>
+	<h5 style="width:100px">HTML</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.8 optimum＝0.5></meter>
+	<br><br>
+	<h5>Javascript</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5> </meter>
+	<br><br>
+	<h5>CSS</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
+	<br><br>
+	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
+</div>
+<div id="skills-middle">
+	<h3>Back End</h3>
+	<br>
+	<h5 >JAVA</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.75 optimum＝0.5></meter>
+	<br><br>
+	<h5>Lucene</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.5> </meter>
+	<br><br>
+	<h5>Relational Database</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
+	<br><br>
+	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
+</div>
+<div id="skills-right">
+	<h3>Design & Visualization</h3>
+	<br>
+	<h5 >D3.js</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
+	<br><br>
+	<h5>Maps API</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.5 optimum＝0.6> </meter>
+	<br><br>
+	<h5>Research & Analysis</h5><meter class="skillsbar" max=1.0 min=0.0 value=0.7 optimum＝0.5></meter>
+	<br><br>
+	<!--<meter class="skillsbar" max=1.0 min=0.0 value=0.5 ></meter>-->
+</div>
+
+</div>
+
+
+
+<!--Skills End -->
 <!-----start-about-------->
-<div class="about" id="about">
+<div class="about" id="about" class="wow bounce" data-wow-delay="0.5s">
   <div class="wrap">
     <h2>Resume</h2>
     <p>Want to know what I can do for you? Check my resume and talk with me!
@@ -424,7 +475,7 @@
 </div>
 <!-->
 
-<div class="contact" id="contact">
+<div  class="contact wow fadeIn" id="contact" >
   <div class="wrap">
     <h2>Contact Me</h2>
     <!--<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>-->
