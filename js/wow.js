@@ -368,7 +368,7 @@
         this.cacheAnimationName(box);
       }
       box.style.visibility = hidden ? 'none' : 'visible';
-      if(!hidden){
+      if(!hidden && box.id == 'skills'){
               $('#html').jQMeter({goal:'100',raised:'90',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
               $('#js').jQMeter({goal:'100',raised:'85',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
               $('#css').jQMeter({goal:'100',raised:'75',width:'250px', height:"20px", bgColor:"whiteSmoke",barColor: "#FF9933", animationSpeed: 1000,counterSpeed: 1000});
